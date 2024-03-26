@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD130 Home Page</title>
+</head>
+<body>
+    <h1>Welcome to WDD130 Web Projects</h1>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Links</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="aboutme/index.html">About Me</a>
+          <a href="wwr/index.html">WWR Site</a>
+          <a href="wwr/site-plan-rafting.html">WWR Site Plan</a>
+          <a href="richardpaulevans/index.html">Personal Site</a>
+          <a href="richardpaulevans/site-plan.html">Personal Site Plan</a>
+        </div>
+      </div>
+      <script>
+        function myFunction() {
+document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+      </script>
+    <p>Zane Wood - WDD130</p>
+</body>
+</html>
